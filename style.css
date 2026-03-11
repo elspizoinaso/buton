@@ -1,0 +1,96 @@
+body {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background-color 0.5s;
+}
+
+.btn-container {
+    position: relative;
+    min-height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.main-btn {
+    transition: all 0.2s ease-in-out;
+    padding: 15px 35px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 2px solid #333;
+    background: #fff;
+    color: #333;
+    user-select: none;
+    box-shadow: 4px 4px 0px #333;
+}
+
+.main-btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px #333;
+}
+
+.shuffling {
+    animation: shuffle 0.2s infinite linear;
+    pointer-events: none;
+}
+
+@keyframes shuffle {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(-80px, 60px); }
+    50% { transform: translate(80px, -60px); }
+    75% { transform: translate(-80px, -60px); }
+    100% { transform: translate(0, 0); }
+}
+
+#message {
+    color: #000;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    max-width: 80%;
+    text-align: center;
+    min-height: 5rem;
+    font-weight: 600;
+}
+
+.game-icon {
+    font-size: 7rem;
+    user-select: none;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#timer-display {
+    font-size: 4rem;
+    font-weight: 900;
+    color: #ef4444;
+    display: none;
+    position: absolute;
+    top: 40px;
+}
+
+.footer-note {
+    position: fixed;
+    bottom: 30px;
+    color: #bbb;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.counter-label {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    color: #888;
+}
